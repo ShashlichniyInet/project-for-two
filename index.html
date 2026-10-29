@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Шесть проектных тем для команды из двух человек: приоритеты, инструменты, сложность и требования."><meta name="theme-color" content="#f4f2eb"><title>Выбираем проект вдвоём</title>
+<style>
+:root{--paper:#f4f2eb;--card:#fffefa;--ink:#272e28;--muted:#60675e;--line:#dadcd1;--green:#394f35;--sage:#e5eadb;--gold:#745b29;--rose:#80544d;--radius:20px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--green);text-underline-offset:4px}a:hover{color:#152c10}a:focus-visible,summary:focus-visible{outline:3px solid #967735;outline-offset:5px;border-radius:4px}.skip{position:absolute;top:-90px;left:20px;background:var(--card);padding:10px;z-index:10}.skip:focus{top:12px}.frame{max-width:1336px;padding:0 48px;margin:auto}.topline{display:flex;align-items:center;justify-content:space-between;padding:28px 0;border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.12em;text-transform:uppercase}.brand{display:flex;align-items:center;gap:10px;font-weight:650}.brand-mark{display:flex;gap:3px;transform:rotate(-15deg)}.brand-mark i{display:block;width:7px;height:19px;background:var(--green);border-radius:6px}.brand-mark i:last-child{height:13px;margin-top:6px}.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:60px;padding:72px 0 54px;align-items:center}.eyebrow{font-size:11px;font-weight:650;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.045em}h1{font-size:clamp(48px,5.7vw,78px);line-height:1.06;margin:18px 0 22px}h1 em{color:var(--green);font-weight:400}.hero p{max-width:510px;color:var(--muted);font-size:17px}.hero-note{display:flex;gap:22px;align-items:center;border-top:1px solid var(--line);padding-top:20px;max-width:450px}.hero-note b{font:52px/1 Georgia,serif;color:var(--green)}.hero-note span{font-size:13px;line-height:1.6;color:var(--muted)}.overview{padding:28px;background:#e7ebdf;border:1px solid #d4dcc9;border-radius:var(--radius);position:relative}.overview h2{font-size:28px;line-height:1.2;margin:5px 0 24px}.ranking{display:grid;grid-template-columns:28px 1fr;gap:16px;padding:18px 0;border-top:1px solid #cdd6c1}.ranking:first-of-type{padding-top:20px}.rank-no{font:25px Georgia,serif;color:var(--green)}.ranking strong{font-size:14px;display:block}.ranking p{font-size:13px;line-height:1.65;margin:4px 0 0;color:#515c49}.ranking a{font-weight:600}.layout{display:grid;grid-template-columns:235px minmax(0,1fr);gap:48px;align-items:start}.sidebar{position:sticky;top:28px;padding:8px 0}.sidebar h2{font:11px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.12em;text-transform:uppercase;margin:0 0 20px;color:var(--muted)}.sidebar nav{display:grid;gap:3px}.sidebar nav a{display:grid;grid-template-columns:22px 1fr 7px;gap:10px;text-decoration:none;align-items:start;font-size:13px;line-height:1.5;padding:11px 6px;border-radius:7px}.sidebar nav a:hover{background:#e8eadf}.nav-number{font-size:11px;color:var(--muted);padding-top:2px}.dot{width:6px;height:6px;border-radius:50%;margin-top:7px}.p1{background:var(--green)}.p2{background:var(--gold)}.p3{background:var(--rose)}.sidebar-footer{font-size:12px;color:var(--muted);margin-top:25px;padding-top:18px;border-top:1px solid var(--line)}.topic{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-bottom:28px;scroll-margin-top:24px}.topic-head{padding:30px 36px 24px;border-bottom:1px solid var(--line)}.priority-1 .topic-head{background:#e8eddf}.topic-top{display:flex;justify-content:space-between;align-items:center;gap:16px}.topic-top .eyebrow span{padding:0 8px;color:#8b9481}.priority-2 .eyebrow{color:var(--gold)}.priority-3 .eyebrow{color:var(--rose)}.topic-icon{width:43px;height:43px;color:var(--green);flex-shrink:0}.topic-icon svg{width:100%;height:100%}.topic h2{font-size:clamp(30px,3.1vw,43px);line-height:1.15;margin:15px 0 10px;max-width:640px}.subtitle{font-size:14px;color:var(--muted);margin:0}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.tags span{font-size:11px;line-height:1.5;padding:5px 10px;border-radius:99px;border:1px solid #ced4c6;background:#fffefa80;color:#4d5847}.topic-body{padding:24px 36px 32px}.topic-body p{margin:0 0 18px}.metadata{font-size:12px;color:var(--muted);padding-bottom:8px;margin-bottom:18px;border-bottom:1px solid var(--line)}h3{font-size:15px;letter-spacing:0;line-height:1.5;margin:25px 0 9px;font-weight:700}.topic-body>p:first-of-type{font-size:17px;color:#414c3a}.topic-body ul,.topic-body ol{padding-left:23px}.topic-body li{padding-left:3px;margin-bottom:10px}.note{padding:1px 18px 0;border-left:2px solid #c0c9b5;margin:24px 0}.note h3{margin-top:0}.difficulty{background:#f1f0e8;border:0;border-radius:10px;padding:16px 18px 1px}.questions{border-color:#a9b69a;color:#495440}.catalog{margin-top:26px;border:1px solid var(--line);border-radius:11px;background:#fafaf5}.catalog summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:16px 18px;font-size:13px;font-weight:600;gap:16px}.catalog summary::-webkit-details-marker{display:none}.catalog summary span{font-size:22px;line-height:1;font-weight:400}.catalog[open] summary span{transform:rotate(45deg)}.catalog[open] summary{border-bottom:1px solid var(--line)}.catalog-body{padding:20px;font-size:14px;line-height:1.8;overflow-wrap:anywhere}.catalog-body h3{font-size:13px;margin-top:25px}.full-title{font-weight:650}.closing{border-top:1px solid var(--line);padding:36px 0 20px;margin-top:10px}.closing h2{font-size:32px;line-height:1.2;margin:0 0 20px}.closing ol{padding-left:22px}.closing li{margin-bottom:12px}.resources{padding:18px 0;border-top:1px solid var(--line);margin-top:28px}.resources summary{cursor:pointer;font-weight:600;font-size:14px}.resources ul{columns:2;column-gap:30px;padding-left:20px;font-size:13px}.resources li{break-inside:avoid;margin-bottom:7px}.resources p,.sources{font-size:12px;color:var(--muted)}footer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);margin-top:44px;padding:24px 0 32px;font-size:11px;letter-spacing:.04em;color:var(--muted)}.top-link{white-space:nowrap}.scope{font-size:12px;color:var(--muted);margin:0 0 28px}p,li{overflow-wrap:anywhere}::selection{background:#dce5cb}@media(min-width:1100px){.topic-body{font-size:15px}}@media(max-width:900px){.frame{padding:0 28px}.hero{gap:30px;padding-top:50px}.layout{grid-template-columns:190px minmax(0,1fr);gap:24px}.topic-head,.topic-body{padding-left:26px;padding-right:26px}}@media(max-width:700px){.frame{padding:0 20px}.topline{padding:20px 0;font-size:10px;letter-spacing:.07em}.hero{grid-template-columns:1fr;padding:38px 0 32px;gap:26px}h1{font-size:52px;margin-top:12px}.hero p{font-size:16px}.hero-note{max-width:none}.overview{padding:22px}.overview h2{font-size:27px;margin-bottom:16px}.ranking{padding:13px 0}.layout{display:block}.sidebar{position:static;margin-bottom:26px;padding:0}.sidebar h2{margin-bottom:12px}.sidebar nav{grid-template-columns:1fr 1fr;gap:6px}.sidebar nav a{border:1px solid var(--line);padding:10px;font-size:11px;grid-template-columns:19px 1fr;gap:6px}.sidebar .dot{display:none}.sidebar-footer{display:none}.topic{border-radius:16px;margin-bottom:22px}.topic-head{padding:22px}.topic-body{padding:20px 22px 24px;font-size:15px}.topic h2{font-size:33px}.topic-icon{width:35px;height:35px}.eyebrow{font-size:10px;letter-spacing:.08em}.topic-top .eyebrow span{padding:0 4px}.metadata{font-size:11px}.resources ul{columns:1}.closing h2{font-size:29px}.catalog-body{padding:16px}.scope{font-size:11px}footer{margin-top:24px;font-size:10px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{body{background:white;font-size:11pt}.frame{padding:0;max-width:none}.sidebar,.top-link,.skip{display:none}.layout,.hero{display:block}.hero{padding:20px 0}.hero h1{font-size:36pt}.overview{margin:20px 0}.topic{break-inside:auto;border-radius:0}.topic-head{break-inside:avoid}.topic h2{font-size:25pt}.topic-body{font-size:11pt}.catalog:not([open]) .catalog-body{display:block}.catalog summary span{display:none}a{color:inherit}.resources ul{columns:1}footer{margin-top:20px}}
+</style></head>
+<body id="top"><a class="skip" href="#topics">Перейти к темам</a><div class="frame">
+<header class="topline"><span class="brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span>Проект на двоих</span><span>2 курс · 2026–2027</span></header>
+<section class="hero" aria-labelledby="page-title"><div><div class="eyebrow">Выбираем следующую большую задачу</div><h1 id="page-title">Что будем<br>делать <em>вдвоём?</em></h1><p>Шесть тем, которые остались после обсуждения. Смотрим, что интересно, чему придётся научиться и с чего проще начать.</p><div class="hero-note"><b>6</b><span>тем для обсуждения<br>Python — основной язык · пока без опыта ML</span></div></div>
+<aside class="overview" aria-label="Сравнение приоритетов"><div class="eyebrow">С чего начать выбор</div><h2>Наш короткий список</h2><div class="ranking"><span class="rank-no">01</span><div><strong>Первый приоритет</strong><p><a href="#topic-11">Свой IT-продукт</a><br>Фаворит, знакомый преподаватель, гибкий объём.</p></div></div><div class="ranking"><span class="rank-no">02</span><div><strong>Второй приоритет</strong><p><a href="#topic-5">Логи</a>, <a href="#topic-9">пожары</a> или <a href="#topic-8">города</a><br>Понятная разработка или наглядное моделирование.</p></div></div><div class="ranking"><span class="rank-no">03</span><div><strong>Третий приоритет</strong><p><a href="#topic-7">Роевой интеллект</a>, <a href="#topic-4">ценность клиента</a><br>Нужно разобраться в интересе или освоить больше теории.</p></div></div></aside></section>
+<div class="layout"><aside class="sidebar"><h2>Перейти к теме</h2><nav aria-label="Проектные темы"><a href="#topic-11"><span class="nav-number">11</span><span>Разработка IT-продукта</span><span class="dot p1" aria-label="Первый приоритет"></span></a><a href="#topic-5"><span class="nav-number">05</span><span>Анализ логов событий</span><span class="dot p2" aria-label="Второй приоритет"></span></a><a href="#topic-9"><span class="nav-number">09</span><span>Моделирование лесных пожаров</span><span class="dot p2" aria-label="Второй приоритет"></span></a><a href="#topic-8"><span class="nav-number">08</span><span>Моделирование развития городов</span><span class="dot p2" aria-label="Второй приоритет"></span></a><a href="#topic-7"><span class="nav-number">07</span><span>Роевой интеллект</span><span class="dot p3" aria-label="Третий приоритет"></span></a><a href="#topic-4"><span class="nav-number">04</span><span>Лояльность и ценность клиента</span><span class="dot p3" aria-label="Третий приоритет"></span></a></nav><div class="sidebar-footer">Номера сохранены из обсуждения.<br>Приоритеты — оценка помощника с учётом ваших интересов.</div></aside>
+<main id="topics"><p class="scope">Пояснения и возможный стек — рекомендации помощника. Требования преподавателей сохранены в блоках «Полное описание из каталога».</p><article id="topic-11" class="topic priority-1" aria-labelledby="title-11">
+    <header class="topic-head"><div class="topic-top"><span class="eyebrow">Первый приоритет <span aria-hidden="true">/</span> Тема №11</span><span class="topic-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="32" height="32" rx="8"/><path d="M16 24h16M24 16v16"/></svg></span></div>
+    <h2 id="title-11">Разработка IT-продукта</h2><p class="subtitle">Своя идея, понятный масштаб</p>
+    <div class="tags"><span>Сложность можно выбрать</span><span>ML можно не использовать</span></div></header>
+    <div class="topic-body"><div class="metadata"><p><strong>Первый приоритет.</strong></p>
+<p>Руководитель: Рудаков Кирилл Александрович. Максимальная численность проектной группы: 30. Отбор: Собеседование; Резюме. Контакт: ArcticBEARD.</p>
+</div><p>Лучшее соответствие вашим вводным: вы уже знакомы с преподавателем, тема сейчас нравится больше остальных, можно выбрать посильную идею и Python как основной язык. Предыдущий опыт ML не нужен, если продукт не требует обучения моделей.</p>
+
+<div class=""><h3>Суть</h3><p>выбрать конкретного пользователя и его проблему, сделать законченный продукт, проверить его в работе и показать результат. Это может быть бот, инструмент автоматизации, аналитическое приложение или веб-сервис.</p>
+</div>
+<div class=""><h3>Что знать на старте</h3><p>базовый Python, функции и структуры данных, разбиение программы на модули, чтение документации. По мере работы понадобятся Git, тестирование и инструменты выбранного продукта.</p>
+</div>
+<div class=""><h3>Инструменты</h3><ul>
+<li>FastAPI: создание серверного API на Python. API — набор операций, которые другие программы вызывают через HTTP. Освоить простой вариант относительно несложно; сложнее правильно организовать данные и обработку ошибок.</li>
+<li>SQLite: база данных в одном файле, удобная для небольшого приложения. Нужны основы SQL: выборка, добавление, обновление данных и связи таблиц.</li>
+<li>Streamlit: интерфейс с таблицами, графиками и фильтрами, написанный на Python. Подходит для аналитических приложений, но пригодность для конкретного продукта нужно согласовать.</li>
+<li>pytest: автоматические проверки поведения программы. Начать легко, полезно проверять ключевые пользовательские сценарии.</li>
+</ul>
+</div>
+<div class="note difficulty"><h3>Сложность</h3><p>регулируется выбранной идеей. Самое трудное — ограничить первую версию и закончить её, а не набирать дополнительные функции.</p>
+</div>
+<div class=""><h3>Как разделиться</h3><p>один отвечает за основную логику и данные, второй — за интерфейс и интеграции. Оба участвуют в требованиях, тестировании и демонстрации. Нужно согласовать самостоятельный вклад каждого в курсовую.</p>
+</div>
+<div class=""><h3>Возможный первый результат</h3><p>приложение решает одну пользовательскую задачу от начала до конца, сохраняет результат и запускается по инструкции.</p>
+</div>
+<div class=""><h3>Идея для обсуждения</h3><p>интерактивный симулятор пожаров с настройками и сравнением сценариев. Это только предложение: преподаватель должен подтвердить пользовательскую задачу и соответствие теме.</p>
+</div>
+<div class="note questions"><h3>Уточнить</h3><p>принимается ли команда из двух человек, как оформляются две индивидуальные работы, какие критерии у продукта, допустим ли преимущественно Python, каковы обязательные документы и этапы.</p>
+</div>
+    <details class="catalog"><summary>Полное описание из каталога <span aria-hidden="true">+</span></summary><div class="catalog-body"><p class="full-title">Разработка IT-продукта</p><p>Строка 53 исходного каталога.</p>
+<h3>Требования, предъявляемые к студентам</h3>
+<p>Для успешной реализации проекта студенту необходимо:
+   •	владеть базовыми навыками программирования как минимум на одном языке;
+   •	понимать основные принципы разработки программного обеспечения;
+   •	уметь самостоятельно работать с технической документацией и изучать новые технологии;
+   •	иметь базовое представление об алгоритмах, структурах данных и организации программного кода;
+   •	быть готовым самостоятельно формулировать и декомпозировать задачи.
+   Знание конкретного технологического стека не является обязательным. В зависимости от выбранного продукта могут использоваться технологии web-, mobile- или desktop-разработки, базы данных, API, облачные сервисы, инструменты анализа данных и другие технологии.</p>
+<h3>Аннотация проекта (тематики)</h3>
+<p>Проект предлагает студентам разработать собственный IT-продукт на основе интересующей их идеи или проблемы.
+   В отличие от проектов с заранее заданной технической задачей, студент самостоятельно определяет направление работы, исследует предметную область, формулирует требования и выбирает технологии для реализации решения.
+   Проект может быть выполнен в формате pet-проекта и не обязан иметь коммерческую составляющую или становиться полноценным стартапом.
+   В качестве результата может быть создан веб-сервис, мобильное или desktop-приложение, Telegram-бот, игра, инструмент автоматизации, аналитический сервис, рекомендательная система, AI-приложение или другой программный продукт.
+   Студент проходит основные этапы создания IT-продукта:
+   идея → исследование → требования → проектирование → разработка → тестирование → демонстрация результата.
+   Главный акцент проекта делается не на масштабе решения, а на создании законченного работающего продукта, решающего конкретную пользовательскую или прикладную задачу.</p>
+<h3>Цель проекта (тематики)</h3>
+<p>Разработать работающий прототип собственного IT-продукта, пройдя путь от определения проблемы и формулирования идеи до технической реализации и проверки полученного решения.</p>
+<h3>Задачи проекта (тематики)</h3>
+<ol>
+<li>Определить проблему или пользовательскую потребность, которую будет решать продукт.<ol start="2">
+<li>Провести анализ предметной области и существующих решений.</li>
+<li>Определить целевых пользователей и основные пользовательские сценарии.</li>
+<li>Сформировать требования к продукту и определить границы MVP.</li>
+<li>Спроектировать архитектуру решения и выбрать технологический стек.</li>
+<li>Разработать работающий прототип IT-продукта.</li>
+<li>Провести тестирование и проверку основных пользовательских сценариев.</li>
+<li>Получить обратную связь от пользователей или иным способом проверить разработанное решение.</li>
+<li>Проанализировать результаты и определить направления дальнейшего развития продукта.</li>
+<li>Подготовить документацию и итоговую демонстрацию.</li>
+</ol>
+</li>
+</ol>
+<h3>Задачи каждого из участников проекта (тематики)</h3>
+<p>Возможные зоны ответственности участников:</p>
+<ul>
+<li>Исследование и продуктовая проработка: анализ проблемы и существующих решений, определение пользовательских сценариев, формирование и приоритизация требований к MVP.</li>
+<li>Backend-разработка: проектирование серверной части, разработка API, реализация бизнес-логики, работа с базами данных и внешними сервисами.</li>
+<li>Frontend / Mobile / Desktop-разработка: разработка пользовательского интерфейса и реализация пользовательских сценариев.</li>
+<li>Data / ML / AI: подготовка и обработка данных, разработка алгоритмов, моделей или AI-компонентов и их интеграция в продукт.</li>
+<li>Инфраструктура и качество: развёртывание приложения, автоматизация процессов разработки, тестирование, мониторинг и обеспечение стабильности работы продукта.</li>
+</ul>
+<h3>Планируемые результаты проекта (тематики)</h3>
+<p>Основным результатом проекта является работающий IT-продукт или его функциональный прототип, который можно запустить и продемонстрировать.
+   По итогам проекта студент должен представить:
+   •	исходный код разработанного решения;
+   •	описание решаемой проблемы и идеи продукта;
+   •	описание целевых пользователей и основных пользовательских сценариев;
+   •	сформулированные требования и границы MVP;
+   •	описание архитектуры и используемых технологий;
+   •	работающую реализацию основных функций продукта;
+   •	результаты тестирования и/или проверки решения;
+   •	описание полученных результатов и возможных направлений дальнейшего развития;
+   •	итоговую демонстрацию продукта.</p>
+</div></details></div>
+  </article>
+<article id="topic-5" class="topic priority-2" aria-labelledby="title-5">
+    <header class="topic-head"><div class="topic-top"><span class="eyebrow">Второй приоритет <span aria-hidden="true">/</span> Тема №5</span><span class="topic-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 13h24M12 24h24M12 35h24"/><circle cx="17" cy="13" r="3"/><circle cx="30" cy="24" r="3"/><circle cx="21" cy="35" r="3"/></svg></span></div>
+    <h2 id="title-5">Анализ логов событий</h2><p class="subtitle">Данные, API и процессы</p>
+    <div class="tags"><span>Средняя сложность</span><span>ML не обязателен</span></div></header>
+    <div class="topic-body"><div class="metadata"><p><strong>Второй приоритет.</strong></p>
+<p>Руководитель: Бегичева Антонина Константиновна. Максимальная численность проектной группы: 9. Отбор: Собеседование. Контакт: <a href="mailto:abegicheva@hse.ru">abegicheva@hse.ru</a>.</p>
+</div><p>Понятный запасной вариант с конкретным инженерным результатом. Меньше новой математики, чем в моделях ценности клиента; ML по описанию не обязателен.</p>
+
+<div class=""><h3>Суть</h3><p>другая система передаёт события вроде «студент запустил код», «получил ошибку», «прошёл тест». Ваш компонент проверяет и хранит их, формирует журналы и предоставляет анализ.</p>
+</div>
+<div class=""><h3>Что знать</h3><p>Python, основы баз данных и SQL, HTTP/REST API, JSON, базовое представление о графах. В каталоге отдельно указаны XES и PM4Py.</p>
+</div>
+<div class=""><h3>Инструменты и понятия</h3><ul>
+<li>REST API: интерфейс приёма и получения данных через HTTP. FastAPI — возможный, но не предписанный инструмент реализации. Первые методы сделать несложно; нужна аккуратная проверка входных данных.</li>
+<li>База данных: хранит события, пользователей и сессии. Сложность средняя: нужно избежать смешения сессий, повторов и потери событий.</li>
+<li>XES: формат обмена журналами событий. Нужно изучить структуру и обязательные атрибуты, а не писать собственный формат с нуля.</li>
+<li>PM4Py: Python-библиотека process mining — изучения процессов по последовательностям событий. Помогает строить представления процессов и получать характеристики журналов. Первые примеры доступны, осмысленная интерпретация сложнее.</li>
+<li>pandas: таблицы событий, очистка, группировки, преобразование времени. Это возможный удобный инструмент обработки.</li>
+</ul>
+</div>
+<p>Пример: по журналу «редактирование → запуск → ошибка → редактирование → успешный тест» показать число попыток, длительность и переходы между действиями.</p>
+
+<div class="note difficulty"><h3>Сложность</h3><p>средняя. Основной риск — не библиотека, а модель данных: что считать сессией, как задавать время, какие события фиксировать и как подключаться к учебной среде.</p>
+</div>
+<div class=""><h3>Как разделиться</h3><p>один делает API, хранение и валидацию, второй — экспорт XES, анализ через PM4Py и визуализацию. Интеграцию и общие сценарии проверять вместе.</p>
+</div>
+<div class=""><h3>Возможный первый результат</h3><p>приём небольшого журнала, сохранение, экспорт XES и один пример анализа. Это предложение по этапности, а не замена обязательного результата.</p>
+</div>
+<div class="note questions"><h3>Уточнить</h3><p>какая учебная система будет источником, есть ли готовые события и пример интеграции, сколько визуализации требуется, как разделить две курсовые и допускается ли команда из двух человек.</p>
+</div>
+    <details class="catalog"><summary>Полное описание из каталога <span aria-hidden="true">+</span></summary><div class="catalog-body"><p class="full-title">Система для анализа процесса решения задач по программированию по логам событий</p><p>Строка 66 исходного каталога.</p>
+<h3>Требования, предъявляемые к студентам</h3>
+<p>что потребуется:</p>
+<ul>
+<li>программирование;</li>
+<li>основы БД;</li>
+<li>понимание REST API;</li>
+<li>готовность освоить Python;</li>
+<li>базовое понимание графов;</li>
+<li>готовность изучить формат представления логов XES и библиотеку PM4Py.</li>
+</ul>
+<h3>Аннотация проекта (тематики)</h3>
+<p>Разрабатывается программная система для сбора, хранения, преобразования и визуального анализа событий, возникающих в учебной среде программирования. Система предназначена для последующего использования методов process mining.</p>
+<h3>Цель проекта (тематики)</h3>
+<p>Разработать программную инфраструктуру для формирования логов событий процесса решения задач по программированию и их последующего анализа методами process mining.</p>
+<h3>Задачи проекта (тематики)</h3>
+<p>Разработать модель событий.
+   Определить формат лога событий.
+   Спроектировать БД.
+   Реализовать API.
+   Реализовать регистрацию событий.
+   Реализовать хранение событий.
+   Реализовать валидацию.
+   Реализовать экспорт XES.
+   Интегрировать PM4Py.
+   Реализовать базовую визуализацию.
+   Подготовить пример интеграции с учебной программной средой.</p>
+<h3>Задачи каждого из участников проекта (тематики)</h3>
+<p>Задачи участников можно разделить на три категории, условно назовем их Участник 1, Участник 2 и Участник 3:</p>
+<p>   Участник 1 — БД</p>
+<ul>
+<li>определить типы событий;</li>
+<li>определить обязательные атрибуты;</li>
+<li>спроектировать БД;</li>
+<li>реализовать хранение;</li>
+<li>реализовать валидацию данных.</li>
+</ul>
+<p>   Участник 2 — API и запись событий</p>
+<ul>
+<li>разработать REST API;</li>
+<li>реализовать регистрацию событий;</li>
+<li>реализовать получение событий;</li>
+<li>реализовать экспорт;</li>
+<li>реализовать механизм интеграции с внешней системой.</li>
+</ul>
+<p>   Участник 3 — process mining и визуализация</p>
+<ul>
+<li>реализовать преобразование в XES;</li>
+<li>интегрировать PM4Py;</li>
+<li>реализовать process discovery;</li>
+<li>реализовать визуализацию;</li>
+<li>разработать демонстрационный сценарий анализа.</li>
+</ul>
+<h3>Планируемые результаты проекта (тематики)</h3>
+<p>Переиспользуемый программный компонент для анализа логов событий решения задач по программированию, который можно подключить к учебной системе</p>
+</div></details></div>
+  </article>
+<article id="topic-9" class="topic priority-2" aria-labelledby="title-9">
+    <header class="topic-head"><div class="topic-top"><span class="eyebrow">Второй приоритет <span aria-hidden="true">/</span> Тема №9</span><span class="topic-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M25 7c3 9-7 11-4 19 3-1 5-4 6-7 6 5 10 10 8 16-2 7-17 9-22 1-5-9 2-15 3-20 1 4 3 5 4 5 2-5 1-9 5-14Z"/></svg></span></div>
+    <h2 id="title-9">Моделирование лесных пожаров</h2><p class="subtitle">Наглядные эксперименты</p>
+    <div class="tags"><span>От средней до высокой</span><span>Роль ML нужно уточнить</span></div></header>
+    <div class="topic-body"><div class="metadata"><p><strong>Второй приоритет.</strong></p>
+<p>Руководитель: Родригес Залепинос Рамон Антонио -. Максимальная численность проектной группы: 10. Отбор: Другое; Другое: <a href="https://q.rodriges.info/">https://q.rodriges.info/</a>. Контакт: <a href="https://q.rodriges.info/">https://q.rodriges.info/</a>.</p>
+</div><p>Наглядная тема, которая вам понравилась. Из двух тем моделирования у пожара проще представить первый прототип. Но реалистичная проверка может оказаться сложной.</p>
+
+<div class=""><h3>Суть</h3><p>карта представляется сеткой. Клетка бывает лесом, горящей или выгоревшей территорией. На каждом шаге состояние меняется по правилам с учётом соседей и выбранных факторов.</p>
+</div>
+<div class=""><h3>Что знать</h3><p>Python, двумерные массивы, основы вероятности, функции и циклы, понимание повторяемого эксперимента. Позже — работа с географическими данными. ML не нужен для простого клеточного автомата, но обязательность ИИ в итоговой работе нужно подтвердить.</p>
+</div>
+<div class=""><h3>Инструменты</h3><ul>
+<li>NumPy: массивы и операции над ними. Позволяет хранить карту и быстро обновлять состояние сетки. Базовый уровень умеренно простой; важная тонкость — обновлять шаг модели по согласованным правилам, а не случайно использовать уже изменённых соседей.</li>
+<li>Matplotlib: графики и анимация распространения пожара. Базовый уровень относительно простой.</li>
+<li>GeoPandas: географические объекты в таблицах — например, границы территорий. Для спутниковых растров могут понадобиться другие инструменты, например Rasterio; необходимость зависит от данных.</li>
+<li>Генератор случайных чисел с фиксируемым seed: помогает повторять эксперименты и сравнивать модели в одинаковых условиях.</li>
+</ul>
+</div>
+<p>Пример эксперимента: сравнить выгоревшую площадь при разном ветре или наличии противопожарной полосы. Это результат модели, его достоверность относительно реальных пожаров нужно проверять отдельно.</p>
+
+<div class="note difficulty"><h3>Сложность</h3><p>средняя для демонстрационного прототипа, высокая для модели с реальными данными и убедительной проверкой. Главный риск — требования к калибровке и реалистичности. Красивая анимация сама по себе не подтверждает правильность модели.</p>
+</div>
+<div class=""><h3>Как разделиться</h3><p>по каталогу каждый участник работает со своей моделью и своими данными. Можно обмениваться опытом и совместно продумывать эксперименты; границы индивидуальных работ стоит уточнить.</p>
+</div>
+<div class=""><h3>Возможный первый результат</h3><p>искусственная карта, базовое распространение, ветер как параметр и сравнение нескольких запусков. Переход к реальным данным должен быть согласован с планом курсовой.</p>
+</div>
+<div class="note questions"><h3>Уточнить</h3><p>обязателен ли ML, какие реальные данные предоставляются, нужны ли спутниковые снимки, как оценивается качество модели, допускаются ли два участника.</p>
+</div>
+    <details class="catalog"><summary>Полное описание из каталога <span aria-hidden="true">+</span></summary><div class="catalog-body"><p class="full-title">Моделирование лесных пожаров с помощью клеточных автоматов и ИИ</p><p>Строка 92 исходного каталога.</p>
+<h3>Требования, предъявляемые к студентам</h3>
+<p>Уверенные навыки программирования, регулярная работа, регулярное посещение онлайн консультаций </p>
+<h3>Аннотация проекта (тематики)</h3>
+<p>   По данным НАСА, около 500 000 &quot;горячих&quot; точек обнаруживается по спутниковым данным каждую неделю - тема пожаров чрезвычайно актуальна. Мы будем работать с реальными данными о пожарах, лесах. Подготовим датасет, создадим модель и запустим моделирование распространения пожара. При возможности проведем оптимизации для ускорения процесса.</p>
+<h3>Цель проекта (тематики)</h3>
+<p>Достижение планируемых результатов проекта</p>
+<h3>Задачи проекта (тематики)</h3>
+<p>см аннотацию проекта</p>
+<h3>Задачи каждого из участников проекта (тематики)</h3>
+<p>В случае командного проекта каждый участник работает со своей моделью и своими данными</p>
+<h3>Планируемые результаты проекта (тематики)</h3>
+<p>Подходы и/или реализации моделирования согласно теме</p>
+</div></details></div>
+  </article>
+<article id="topic-8" class="topic priority-2" aria-labelledby="title-8">
+    <header class="topic-head"><div class="topic-top"><span class="eyebrow">Второй приоритет <span aria-hidden="true">/</span> Тема №8</span><span class="topic-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 40V22h10v18M18 40V9h12v31M30 40V17h10v23M6 40h36M22 17h4M22 24h4M22 31h4"/></svg></span></div>
+    <h2 id="title-8">Моделирование развития городов</h2><p class="subtitle">Карты и клеточные автоматы</p>
+    <div class="tags"><span>От средней до высокой</span><span>Роль ML нужно уточнить</span></div></header>
+    <div class="topic-body"><div class="metadata"><p><strong>Второй приоритет.</strong></p>
+<p>Руководитель: Родригес Залепинос Рамон Антонио -. Максимальная численность проектной группы: 10. Отбор: Другое; Другое: <a href="https://q.rodriges.info/">https://q.rodriges.info/</a>. Контакт: <a href="https://q.rodriges.info/">https://q.rodriges.info/</a>.</p>
+</div><p>Тема выглядит подходящей по интересам и допускает преимущественно Python. По сравнению с пожарами может быть труднее определить правила развития и получить сопоставимые карты разных лет.</p>
+
+<div class=""><h3>Суть</h3><p>территория разбивается на клетки с состояниями «жильё», «дорога», «свободная территория» и другими. Вероятность изменения клетки зависит от окружения и внешних факторов.</p>
+</div>
+<div class=""><h3>Что знать</h3><p>Python, NumPy, pandas, основы вероятности, работу с координатами и картами. Для простых правил клеточного автомата ML не обязателен; его роль в конкретном задании нужно согласовать.</p>
+</div>
+<div class=""><h3>Инструменты</h3><ul>
+<li>NumPy: сетка территории и вычисление переходов клеток. Базовая сложность умеренная.</li>
+<li>GeoPandas: таблицы с точками, линиями и полигонами, операции над картографическими объектами. Сложность средняя из-за координат, пересечений и согласования источников.</li>
+<li>Растр: карта как сетка пикселей, например классификация поверхности по спутниковым данным. Важно согласовать размер клетки и территорию.</li>
+<li>Система координат: способ связать числа с местами на Земле. Данные разных источников нужно приводить к совместимому представлению.</li>
+<li>Визуализация: сравнение исходной карты, результата и наблюдений. Можно начать с Matplotlib, интерактивный интерфейс выбирать после требований.</li>
+</ul>
+</div>
+<p>Пример: добавить транспортный коридор и исследовать, как выбранные правила модели меняют распределение застройки. Вывод описывает сценарий при принятых предположениях, а не гарантированный прогноз города.</p>
+
+<div class="note difficulty"><h3>Сложность</h3><p>средняя или высокая. Главные трудности — получение и очистка карт, выбор правил, калибровка и проверка по реальным изменениям. Не стоит заранее брать обработку сырых спутниковых снимков, если готовой классификации достаточно и руководитель согласен.</p>
+</div>
+<div class=""><h3>Как разделиться</h3><p>по каталогу каждый участник работает со своей моделью и своими данными. Лучше выбрать связанные, но самостоятельные постановки и согласовать их с руководителем.</p>
+</div>
+<div class=""><h3>Возможный первый результат</h3><p>небольшая карта, несколько понятных правил, запуск сценария и сравнение параметров.</p>
+</div>
+<div class="note questions"><h3>Уточнить</h3><p>есть ли готовые данные, обязателен ли ML, какую территорию и период изучать, какие метрики качества требуются и можно ли работать вдвоём.</p>
+</div>
+    <details class="catalog"><summary>Полное описание из каталога <span aria-hidden="true">+</span></summary><div class="catalog-body"><p class="full-title">Моделирование развития городов с помощью клеточных автоматов и ИИ</p><p>Строка 91 исходного каталога.</p>
+<h3>Требования, предъявляемые к студентам</h3>
+<p>Уверенные навыки программирования, желание работать с реальными данными, регулярная работа, регулярное посещение онлайн консультаций </p>
+<h3>Аннотация проекта (тематики)</h3>
+<p>   Городская среда - важное пространство для жизни и благосостояния людей. По состоянию на 2020 год 56,2 % населения Земли проживало в городах. Каким образом будет развиваться инфраструктура? Какие факторы влияют на расположение торговых точек? Если проложить новый транспортный коридор, каким образом изменится район? Ответить на эти вопросы позволяет моделирование с использованием карт города, спутниковых и других гео-данных.</p>
+<h3>Цель проекта (тематики)</h3>
+<p>Достижение планируемых результатов проекта</p>
+<h3>Задачи проекта (тематики)</h3>
+<p>Познакомиться с предметной областью, подготовить данные, реализовать модель, провести эксперименты</p>
+<h3>Задачи каждого из участников проекта (тематики)</h3>
+<p>В случае командного проекта каждый участник работает со своей моделью и своими данными</p>
+<h3>Планируемые результаты проекта (тематики)</h3>
+<p>Алгоритмы и/или реализации моделирования развития городов с помощью клеточных автоматов, по возможности интерактивная визуализация результатов</p>
+</div></details></div>
+  </article>
+<article id="topic-7" class="topic priority-3" aria-labelledby="title-7">
+    <header class="topic-head"><div class="topic-top"><span class="eyebrow">Третий приоритет <span aria-hidden="true">/</span> Тема №7</span><span class="topic-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="4"/><circle cx="10" cy="12" r="3"/><circle cx="37" cy="10" r="3"/><circle cx="39" cy="34" r="3"/><circle cx="13" cy="38" r="3"/><path d="m12 14 9 8m6-1 8-9m-7 15 9 5m-16-5-6 9"/></svg></span></div>
+    <h2 id="title-7">Роевой интеллект</h2><p class="subtitle">Алгоритмы поиска решений</p>
+    <div class="tags"><span>Средняя сложность</span><span>Можно начать без ML</span></div></header>
+    <div class="topic-body"><div class="metadata"><p><strong>Третий приоритет.</strong></p>
+<p>Руководитель: Родригес Залепинос Рамон Антонио. Максимальная численность проектной группы: 30. Отбор: Другое; Другое: <a href="https://q.rodriges.info/">https://q.rodriges.info/</a>. Контакт: <a href="https://q.rodriges.info/">https://q.rodriges.info/</a>.</p>
+</div><p>Подходит по языку и не требует ML для начала, но пока вам не очень понятна сама область. Это запасной вариант, если после небольшого знакомства понравятся алгоритмы оптимизации и эксперименты.</p>
+
+<div class=""><h3>Суть</h3><p>искать хорошее решение среди большого числа вариантов с помощью множества взаимодействующих кандидатов. Это не обязательно обучение нейросети.</p>
+</div>
+<p>Пример — поиск короткого маршрута. В муравьином алгоритме виртуальные муравьи строят маршруты, удачные участки получают больше условного «феромона», а следующие попытки учитывают накопленную информацию. При этом сохраняется случайность, чтобы пробовать новые пути.</p>
+
+<p>Другой пример — рой частиц: кандидаты перемещаются в пространстве решений, учитывая свои лучшие найденные точки и лучшие находки других участников роя. Конкретные алгоритмы выбираются с руководителем.</p>
+
+<div class=""><h3>Что знать</h3><p>Python, алгоритмы, оценку сложности, основы вероятности, векторы и понятие функции, которую нужно минимизировать или максимизировать.</p>
+</div>
+<div class=""><h3>Инструменты</h3><ul>
+<li>NumPy: хранение кандидатов и численные вычисления. Сложность умеренная.</li>
+<li>Matplotlib: графики качества и скорости улучшения решения. Начать относительно просто.</li>
+<li>Набор тестовых задач: одинаковые условия, на которых сравниваются алгоритмы. Важнее количества библиотек.</li>
+</ul>
+</div>
+<div class="note difficulty"><h3>Сложность</h3><p>средняя; для некоторых задач потребуется более глубокая математика. Главный риск — ограничиться одним удачным запуском. Стохастические алгоритмы нужно запускать многократно, сравнивать качество, разброс и вычислительный бюджет. Лучшее найденное решение не обязательно является глобально оптимальным.</p>
+</div>
+<div class=""><h3>Как разделиться</h3><p>каждый реализует свой алгоритм; вместе готовите единый интерфейс задач, эксперименты и сравнительный отчёт.</p>
+</div>
+<div class=""><h3>Возможный первый результат</h3><p>один алгоритм на маленькой задаче, график улучшения и сравнение с простым базовым методом.</p>
+</div>
+<div class="note questions"><h3>Уточнить</h3><p>какие алгоритмы и задачи предлагаются, насколько важны доказательства и анализ сложности, есть ли готовые бенчмарки, допустим ли Python и команда из двух человек.</p>
+</div>
+    <details class="catalog"><summary>Полное описание из каталога <span aria-hidden="true">+</span></summary><div class="catalog-body"><p class="full-title">Система алгоритмов роевого интеллекта</p><p>Строка 49 исходного каталога.</p>
+<h3>Требования, предъявляемые к студентам</h3>
+<p>Уверенные навыки программирования, регулярная работа, регулярное посещение онлайн консультаций</p>
+<h3>Аннотация проекта (тематики)</h3>
+<p>Swarm Intelligence (роевой интеллект) – раздел искусственного интеллекта, алгоритмы которого используют принципы поведения групп социальных насекомых, птиц, животных, рыб и других живых организмов. Например, один муравей ведет себя относительно просто, однако в группе муравьи способны решать сложные задачи: находить кратчайшие пути между источниками пищи и своим гнездом, бороться за ресурсы, сортировать личинки по размеру. Swarm Intelligence успешно применяется для широкого круга научных и практических задач: разбиение графов, маршрутизация транспортных средств, задача о назначениях, поиск трендов, обработка изображений; в некоторых случаях только Swarm Intelligence способен отыскивать лучшие решения. Роевые алгоритмы способны быстро находить субоптимальные, но хорошие решения NP-полных задач за разумное время. При этом эти алгоритмы просты в понимании и реализации. В проекте предлагается познакомиться с множеством алгоритмов роевого интеллекта, реализовать, изучить их свойства и производительность.</p>
+<h3>Цель проекта (тематики)</h3>
+<p>Познакомиться с алгоритмами роевого интеллекта, реализовать, изучить их свойства и производительность.</p>
+<h3>Задачи проекта (тематики)</h3>
+<p>-реализовать алгоритмы роевого интеллекта (выбор алгоритмов происходит по согласованию с руководителем)
+   -изучить свойства алгоритмов 
+   -оценить производительность алгоритмов 
+   -подготовить документы к защите</p>
+<h3>Задачи каждого из участников проекта (тематики)</h3>
+<p>Алгоритмы независимы друг от друга, но стиль реализации должен быть согласован с руководителем. Каждый участник группы (команды) выполняет задачи, указанные в поле &quot;Задачи&quot;</p>
+<h3>Планируемые результаты проекта (тематики)</h3>
+<p>Программные реализации алгоритмов роевого интеллекта и отчет об их свойствах и производительности.</p>
+</div></details></div>
+  </article>
+<article id="topic-4" class="topic priority-3" aria-labelledby="title-4">
+    <header class="topic-head"><div class="topic-top"><span class="eyebrow">Третий приоритет <span aria-hidden="true">/</span> Тема №4</span><span class="topic-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 39V27h7v12m6 0V18h7v21m6 0V9h7v30M7 39h37M10 19l13-8 9 2 8-8"/></svg></span></div>
+    <h2 id="title-4">Лояльность и ценность клиента</h2><p class="subtitle">Покупки, вероятность и прогноз</p>
+    <div class="tags"><span>Высокая без опыта ML</span><span>ML входит в задачи</span></div></header>
+    <div class="topic-body"><div class="metadata"><p><strong>Третий приоритет.</strong></p>
+<p>Руководитель: Лукьянченко Петр Павлович. Максимальная численность проектной группы: 5. Отбор: Собеседование. Контакт: PetrLukianchenko.</p>
+</div><p>Вам интересна идея, но отсутствие опыта ML делает старт заметно тяжелее. Низкий приоритет связан с объёмом новых знаний, а не с качеством темы. Она поднимется выше, если вы готовы специально изучать ML и клиентскую аналитику.</p>
+
+<div class=""><h3>Суть</h3><p>по истории покупок оценивать будущую активность и денежную ценность клиента, сравнивать методы и показывать бизнес-пользователю понятные результаты.</p>
+</div>
+<div class=""><h3>Что знать</h3><p>Python, pandas, основы теории вероятностей и статистики, принципы обучения моделей и разделения данных. В каталоге прямо указаны вероятностные модели, бустинг, сегментация, матрицы миграции и дашборд.</p>
+</div>
+<div class=""><h3>Инструменты и понятия</h3><ul>
+<li>pandas: очистка транзакций, даты, группировка по клиентам, расчёт признаков. Для новичков сложность средняя из-за качества реальных данных.</li>
+<li>BG/NBD: вероятностная модель повторных покупок и сохранения активности клиента. Основная сложность — понять предположения и ограничения, а не вызвать библиотечную функцию.</li>
+<li>Gamma-Gamma: вероятностная модель среднего денежного размера покупки. Вместе с прогнозом числа покупок помогает оценить будущую денежную ценность; важны предположения модели.</li>
+<li>Градиентный бустинг: ML-модель, последовательно улучшающая прогноз ансамблем деревьев. CatBoost — возможная библиотека, конкретный выбор для этой темы в каталоге не закреплён.</li>
+<li>Сегментация: правила разделения клиентов на группы; матрица миграции показывает переходы между группами во времени.</li>
+<li>Дашборд: интерфейс с показателями и фильтрами. Возможный инструмент — Streamlit.</li>
+<li>pip-пакет: оформленная Python-библиотека, которую можно установить и повторно использовать. Упаковка требует аккуратной структуры, зависимостей и документации.</li>
+</ul>
+</div>
+<p>Пример: оценить ожидаемое число покупок и траты клиента за следующие полгода, затем проверить прогноз по фактическому будущему периоду.</p>
+
+<div class="note difficulty"><h3>Сложность</h3><p>высокая для команды без ML. Нужно одновременно изучить данные, модели, проверку прогнозов и упаковку продукта. Запуск готовой библиотеки не означает понимания качества результата. Особенно важно не использовать будущие данные при обучении и подготовке признаков.</p>
+</div>
+<div class=""><h3>Как разделиться</h3><p>один глубже занимается моделями, второй — данными, сегментацией и дашбордом. Основы оценки моделей нужны обоим, иначе проект и защита будут зависеть от одного участника.</p>
+</div>
+<div class=""><h3>Возможный первый результат</h3><p>очищенная история транзакций, простая базовая оценка будущих покупок и проверка по отложенному периоду; затем вероятностные модели и бустинг по согласованному плану.</p>
+</div>
+<div class="note questions"><h3>Уточнить</h3><p>готовы ли брать студентов совсем без ML, есть ли вводные материалы и готовые датасеты, сколько моделей обязательно реализовать, допустимы ли готовые библиотеки, какой ожидается уровень математики и можно ли работать вдвоём.</p>
+</div>
+    <details class="catalog"><summary>Полное описание из каталога <span aria-hidden="true">+</span></summary><div class="catalog-body"><p class="full-title">индекс лояльности и оценка пожизненной ценности клиента</p><p>Строка 37 исходного каталога.</p>
+<h3>Требования, предъявляемые к студентам</h3>
+<p>теория вероятностей (вероятностные модели покупок), ML (бустинг), pandas; один участник с навыками визуализации/дашбордов. Роли: вероятностные модели (BG/NBD, Gamma-Gamma), бустинг-альтернатива, сегментация, матрицы миграции, дашборд, упаковка.</p>
+<h3>Аннотация проекта (тематики)</h3>
+<p>Оценка лояльности и пожизненной ценности клиента (CLV) — базовая задача клиентской аналитики. Классический подход — вероятностные модели BG/NBD и Gamma-Gamma, современный — градиентный бустинг на признаках. Проект — коробочное решение, реализующее оба подхода с честным сравнением, сегментацию клиентов на «лояльные / ядро / прочие» с матрицами миграции между сегментами во времени и дашборд для бизнес-пользователя.</p>
+<h3>Цель проекта (тематики)</h3>
+<p>построить коробочное решение оценки лояльности и CLV, сравнить вероятностные модели с бустингом и реализовать сегментацию с анализом миграции.</p>
+<h3>Задачи проекта (тематики)</h3>
+<p>обзор моделей CLV; реализация BG/NBD и Gamma-Gamma; бустинг-модель CLV на тех же данных; протокол сравнения по горизонтам; правила сегментации и матрицы миграции; дашборд; упаковка и демо на открытых данных; подготовка отчёта.</p>
+<h3>Задачи каждого из участников проекта (тематики)</h3>
+<p>обзор моделей CLV; реализация BG/NBD и Gamma-Gamma; бустинг-модель CLV на тех же данных; протокол сравнения по горизонтам; правила сегментации и матрицы миграции; дашборд; упаковка и демо на открытых данных; подготовка отчёта.</p>
+<h3>Планируемые результаты проекта (тематики)</h3>
+<p>pip-пакет с дашбордом; таблица сравнения моделей CLV по горизонтам и сегментам; доклад на семинаре и студенческой конференции; база для темы 3 курса «CLV: BG/NBD против бустинга против последовательностных сетей».</p>
+</div></details></div>
+  </article>
+<section class="closing" aria-labelledby="questions"><div class="eyebrow">Перед окончательным решением</div><h2 id="questions">Что спросить у преподавателя</h2><ol>
+<li>Принимают ли команду из двух человек и как разделяют индивидуальные курсовые? Максимальная численность проектной группы в каталоге не подтверждает допустимость команды конкретного размера.</li>
+<li>Можно ли использовать Python как основной язык и какие другие языки действительно обязательны?</li>
+<li>Что обязательно должно быть в результате: приложение, эксперимент, модели, документация, публикация?</li>
+<li>Есть ли готовые данные, примеры и вводные материалы?</li>
+<li>Для моделирования: обязателен ли ML и как проверяют качество модели?</li>
+<li>Каковы этапы, нагрузка и актуальное наличие мест? Эти сведения с руководителями не подтверждены.</li>
+</ol>
+<details class="resources"><summary>Документация по инструментам</summary><p>Эти ссылки поясняют инструменты и не добавляют обязательных требований к проектам. Документация меняется; версии и совместимость выбранного стека нужно проверять при начале реализации.</p>
+<ul>
+<li><a href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/">pandas: вводные руководства</a></li>
+<li><a href="https://numpy.org/doc/stable/user/absolute_beginners.html">NumPy: руководство для начинающих</a></li>
+<li><a href="https://matplotlib.org/stable/users/getting_started/">Matplotlib: начало работы</a></li>
+<li><a href="https://fastapi.tiangolo.com/">FastAPI</a></li>
+<li><a href="https://docs.streamlit.io/">Streamlit</a></li>
+<li><a href="https://github.com/process-intelligence-solutions/pm4py/blob/release/docs/source/getting_started.rst">PM4Py: начало работы</a></li>
+<li><a href="https://geopandas.org/en/stable/about.html">GeoPandas</a></li>
+<li><a href="https://scikit-learn.org/stable/getting_started.html">scikit-learn: начало работы</a></li>
+<li><a href="https://catboost.ai/docs/en/">CatBoost</a></li>
+<li><a href="https://lifetimes.readthedocs.io/en/latest/Quickstart.html">Lifetimes: примеры BG/NBD и Gamma-Gamma</a></li>
+</ul>
+</details><div class="sources"><p>Источник сведений о проектах: предоставленный файл «Каталог тематик Проектных групп для 2 курса 26-27.xlsx», лист «Каталог тематик», строки 37, 49, 53, 66, 91, 92.  Приоритеты и рекомендации основаны на вашем описании интересов и подготовки.</p>
+<p>Свободные места, возможность команды из двух человек, актуальные сроки и согласие руководителей на предложенные варианты не проверялись.</p>
+</div></section></main></div>
+<footer><span>Подборка для совместного выбора · 29 октября 2026</span><a class="top-link" href="#top">Вернуться наверх ↑</a></footer></div></body></html>
